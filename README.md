@@ -24,7 +24,7 @@ providing immediate feedback.
 
 Sure!
 
-<img src="www/demo.gif" align="center"/>
+<img src="www/demo.gif" align="center" width = "150%"/>
 
 ## What resources did you use to create it?
 
