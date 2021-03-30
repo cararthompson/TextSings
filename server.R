@@ -2,7 +2,8 @@
 library(shiny)
 library(tidyverse)
 
-# Paul Toy's light palette
+# Paul Toy's light palette: https://personal.sron.nl/~pault/#sec:qualitative
+
 palette <- c('#EEDD88', # 1-2
              '#FFAABB', # 3-4
              '#EE8866', # 5-6
@@ -29,7 +30,6 @@ sentence.lengths <- function(x){
     return(textdf)
 }
 
-# Define server logic required to draw a histogram
 shinyServer(function(input, output) {
     output$singText <- renderUI({
         

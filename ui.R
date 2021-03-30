@@ -2,12 +2,11 @@
 library(shiny)
 library(shinythemes)
 
-# Define UI for application that draws a histogram
+
 shinyUI(fluidPage(
     
     theme = shinytheme("yeti"),
 
-    # Application title
     titlePanel("Don't just write words. Write music."),
 
     fluidRow(
@@ -43,7 +42,6 @@ shinyUI(fluidPage(
         ),
         column(width = 1),
 
-        # Show a plot of the generated distribution
         column(
             h3("Does the writing sing?"),
             h3(" "),
