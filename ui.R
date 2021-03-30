@@ -1,11 +1,3 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
 
 library(shiny)
 library(shinythemes)
@@ -14,18 +6,16 @@ library(shinythemes)
 shinyUI(fluidPage(
     
     theme = shinytheme("yeti"),
-  #  shinythemes::themeSelector(), 
 
     # Application title
     titlePanel("Don't just write words. Write music."),
 
-    # Sidebar with a slider input for number of bins
     fluidRow(
         
         column(h3("First, some writing advice from Gary Provost"),
                img(src='provost.jpg', align = "centre", style="width: 80%, height = auto"),
                width = 4,
-               h3("A few other pointers"),
+               h3("Find out more"),
                p(tags$ul(
                    tags$li("The highlight colours are from", tags$a(href = "https://personal.sron.nl/~pault/#sec:qualitative",
                                                                     "Paul Tol's Light palette."), 
@@ -33,7 +23,7 @@ shinyUI(fluidPage(
                    tags$li("If you found this app useful, please share it with others!"),
                    tags$li("Here's where to ", tags$a(href = "https://github.com/cararthompson/TextSings/", "view the code behind the app"), 
                            "and", tags$a(href = "https://github.com/cararthompson/TextSings/issues", "file bug reports and feature requests.")),
-                   tags$li("Any other queries, just ", tags$a(href = "https://twitter.com/cararthompson", "get in touch"), "!")))),
+                   tags$li("Any other queries, just ", tags$a(href = "https://twitter.com/cararthompson", "get in touch!"))))),
         
         column(h3("Your text"),
                h3(" "),

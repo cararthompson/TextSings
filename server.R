@@ -1,19 +1,3 @@
-#
-# This is the server logic of a Shiny web application. You can run the
-# application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-# #
-# 
-demo_text <- "This sentence has five words. Here are five more words. Five-word sentences are fine. But several together become monotonous. Listen to what is happening. The writing is getting boring. The sound of it drones. It's like a stuck record. The ear demands some variety.
-
-    Now listen. I vary the sentence length, and I create music. Music. The writing sings. It has a pleasant rhythm, a lilt, a harmony. I use short sentences. And I use sentences of medium length. And sometimes when I am certain the reader is rested, I will engage him with a sentence of considerable length, a sentence that burns with energy, and builts with all the impetus of a crescendo, the roll of the drums, the crash of the cymbals --- sounds that say listen to this, it is important.
-
-    So write with a combination of short, medium, and long sentences. Create a sound that pleases the reader's ear. Don't just write words. Write music.
-
-    - Gary Provost"
 
 library(shiny)
 library(tidyverse)
@@ -47,14 +31,11 @@ sentence.lengths <- function(x){
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-   
-    
     output$singText <- renderUI({
         
         textOut <- sentence.lengths(x = input$text)
 
         HTML(paste("<strong>", textOut$out_sentence), "</strong>")
-        
     })
     
 })
