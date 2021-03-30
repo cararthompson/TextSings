@@ -1,0 +1,66 @@
+#
+# This is the user-interface definition of a Shiny web application. You can
+# run the application by clicking 'Run App' above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    http://shiny.rstudio.com/
+#
+
+library(shiny)
+library(shinythemes)
+
+# Define UI for application that draws a histogram
+shinyUI(fluidPage(
+    
+    theme = shinytheme("yeti"),
+  #  shinythemes::themeSelector(), 
+
+    # Application title
+    titlePanel("Don't just write words. Write music."),
+
+    # Sidebar with a slider input for number of bins
+    fluidRow(
+        
+        column(h3("First, some writing advice from Gary Provost"),
+               img(src='provost.jpg', align = "centre", style="width: 80%, height = auto"),
+               width = 4,
+               h3("A few other pointers"),
+               p(tags$ul(
+                   tags$li("The highlight colours are from", tags$a(href = "https://personal.sron.nl/~pault/#sec:qualitative",
+                                                                    "Paul Tol's Light palette."), 
+                           "Follow the link to read more about colour palettes optimized for accessible dataviz."),
+                   tags$li("If you found this app useful, please share it with others!"),
+                   tags$li("Here's where to ", tags$a(href = "https://github.com/cararthompson/TextSings/", "view the code behind the app"), 
+                           "and", tags$a(href = "https://github.com/cararthompson/TextSings/issues", "file bug reports and feature requests.")),
+                   tags$li("Any other queries, just ", tags$a(href = "https://twitter.com/cararthompson", "get in touch"), "!")))),
+        
+        column(h3("Your text"),
+               h3(" "),
+               textAreaInput(
+                             inputId = "text",
+                             label = "Please type or copy your text into this box. Any subsequent edits you make will be 
+                             reflected in the output.",
+                             value = "",
+                             width = "100%",
+                             height = '500px',
+                             cols = NULL,
+                             rows = NULL,
+                             placeholder = NULL,
+                             resize = "vertical"
+                         ),
+                     width = 3
+        ),
+        column(width = 1),
+
+        # Show a plot of the generated distribution
+        column(
+            h3("Does the writing sing?"),
+            h3(" "),
+            
+                htmlOutput("singText"),
+            width = 3
+            
+        )
+    )
+))
