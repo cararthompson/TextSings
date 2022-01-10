@@ -5,9 +5,9 @@ account: crthompson
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3884737
-bundleId: 4411761
+bundleId: 4411959
 url: https://cararthompson.shinyapps.io/TextSings/
-when: 1617106956.10469
+when: 1617109480.1117
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: README.md|README.Rmd
+ignoredFiles: README.md|README.Rmd|www/demo.gif
